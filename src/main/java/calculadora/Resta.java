@@ -92,6 +92,12 @@ public class Resta {
                 '}';
     }
 
+    /**
+     * Resta de dos números reales.
+     * @author Juan Montiel (xmontiel@github.com)
+     * @version 1.0
+     */
+    
     public double resta2Reales(){
         return numeroReal1 - numeroReal2;
     }
@@ -101,6 +107,12 @@ public class Resta {
         this.numeroReal2 = numeroReal2;
         return numeroReal1 - numeroReal2;
     }
+
+    /**
+     * Resta de dos números enteros.
+     * @author Juan Montiel (xmontiel@github.com)
+     * @version 1.0
+     */
 
     public int resta2Enteros(){
         return numeroEntero1 - numeroEntero2;
@@ -112,6 +124,12 @@ public class Resta {
         return numeroEntero1 - numeroEntero2;
     }
 
+    /**
+     * Resta de tres números reales.
+     * @author Juan Montiel (xmontiel@github.com)
+     * @version 1.0
+     */
+
     public double resta3Reales(){
         return numeroReal1 - numeroReal2 - numeroReal3;
     }
@@ -122,6 +140,12 @@ public class Resta {
         this.numeroReal3 = numeroReal3;
         return numeroReal1 - numeroReal2 - numeroReal3;
     }
+
+    /**
+     * Resta acumulando el resultado de la anterior resta como factor a restar en la siguiente.
+     * @author Juan Montiel (xmontiel@github.com)
+     * @version 1.0
+     */
 
     public void restaAcumulando(double numeroARestar){
         numeroAcumulado -= numeroARestar;
