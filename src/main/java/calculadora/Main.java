@@ -20,7 +20,62 @@ public class Main {
 
         switch (opcion) {
             case 1:
-                System.out.println("Suma");
+                System.out.println("Elija la operación matemática que desee");
+                System.out.println("1 Suma de dos numeros reales");
+                System.out.println("2 Suma de dos numeros enteros");
+                System.out.println("3 Suma de tres numeros reales");
+                System.out.println("4 Suma de numero acumulado");
+                opcion = scanner.nextInt();
+                switch (opcion) {
+                    case 1:
+                        System.out.println("Introduzca primer numero");
+                        Suma suma1 = new Suma();
+                        double numReal1 = 0;
+                        double numReal2 = 0;
+                        numReal1 = scanner.nextDouble();
+                        System.out.println("Introduzca segundo numero");
+                        numReal2 = scanner.nextDouble();
+                        System.out.println("El resultado es " + suma1.sumaDosNumReals(numReal1, numReal2));
+                        break;
+                    case 2:
+                        System.out.println("Introduzca primer numero");
+                        Suma suma2 = new Suma();
+                        int numEntero1 = 0;
+                        int numEntero2 = 0;
+                        numEntero1 = scanner.nextInt();
+                        System.out.println("Introduzca segundo numero");
+                        numEntero2 = scanner.nextInt();
+                        System.out.println("El resultado es " + suma2.sumaDosEnteros(numEntero1, numEntero2));
+                        break;
+                    case 3:
+                        System.out.println("Introduzca primer numero");
+                        Suma suma3 = new Suma();
+                        double numReal3 = 0;
+                        double numReal4 = 0;
+                        double numReal5 = 0;
+                        numReal3 = scanner.nextDouble();
+                        System.out.println("Introduzca segundo numero");
+                        numReal4 = scanner.nextDouble();
+                        System.out.println("Introduzca tercer numero");
+                        numReal5 = scanner.nextDouble();
+                        System.out.println("El resultado es " + suma3.sumaTresNumReals(numReal3, numReal4, numReal5));
+                        break;
+                    case 4:
+                        System.out.println("Introduzca numeros para sumarlos. Introduzca 999 para salir");
+                        Suma suma4 = new Suma();
+                        double numAcumulado = 0;
+                        double numeroASumar = 0;
+
+                        System.out.println(numAcumulado);
+                        while (numeroASumar != 999) {
+                            numeroASumar = scanner.nextDouble();
+                            suma4.sumaAcumulado(numAcumulado);
+                            System.out.println(suma4.getNumAcumulado());
+                        }
+                        break;
+                    default:
+                        System.out.println("Opción erronea");
+                }
                 break;
             case 2:
                 System.out.println("Elija la operación matemática que desee");
