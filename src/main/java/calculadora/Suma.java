@@ -23,8 +23,11 @@ private static double numAcumulado = 0;
     public Suma() {
     }
 
+    public static double getNumAcumulado() {
+        return numAcumulado;
+    }
 
-/**
+    /**
  * Suman dos números reales
  * @param numReal1
  * @param numReal2
