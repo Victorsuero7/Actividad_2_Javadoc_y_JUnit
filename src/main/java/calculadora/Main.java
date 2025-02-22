@@ -2,7 +2,6 @@
  * @author Juan Montiel (xmontiel@github.com)
  * @version 1.0
  */
-
 package calculadora;
 
 import java.util.Scanner;
