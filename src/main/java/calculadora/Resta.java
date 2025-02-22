@@ -6,7 +6,7 @@
  * Resta con valor acumulado, tendrá un parámetro de entrada y la clase deberá de guardar el valor acumulado.
  *
  * @author Juan Montiel (xmontiel@github.com)
- * @version 0.1
+ * @version 1.0
  */
 
 package calculadora;
