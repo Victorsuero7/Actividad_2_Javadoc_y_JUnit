@@ -7,7 +7,7 @@ package calculadora;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Cociente.ZeroMathException {
 
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
@@ -147,6 +147,57 @@ public class Main {
                 break;
             case 4:
                 System.out.println("División");
+                System.out.println("Elija la operación matemática que desee");
+                System.out.println("1 Division de dos numeros reales");
+                System.out.println("2 Divison de dos numeros enteros");
+                System.out.println("3 Calculo del numero inverso un numero real");
+                System.out.println("4 Raiz cuadrada de un numeor real");
+                opcion = scanner.nextInt();
+                switch (opcion){
+                    case 1:
+                        try{
+                        System.out.println("Introduzca el dividendo");
+                        double dividendo = scanner.nextDouble();
+                        System.out.println("Introduzca el divisor");
+                        double divisor = scanner.nextDouble();
+                        System.out.println("Resultado: " + Cociente.dividir(dividendo,divisor));
+                        } catch (Cociente.ZeroMathException e) {
+                            System.err.println(e + " on line " + e.getStackTrace()[0].getLineNumber());
+                        }
+                        break;
+                    case 2:
+                        try{
+                            System.out.println("Introduzca el dividendo");
+                            int dividendo = scanner.nextInt();
+                            System.out.println("Introduzca el divisor");
+                            int divisor = scanner.nextInt();
+                            System.out.println("Resultado: " + Cociente.dividir(dividendo,divisor));
+                        } catch (Cociente.ZeroMathException e) {
+                            System.err.println(e + " on line " + e.getStackTrace()[0].getLineNumber());
+                        }
+                        break;
+                    case 3:
+                        try{
+                            System.out.println("Introduzca un numero para calcular su inverso");
+                            double n = scanner.nextDouble();
+                            System.out.println("Resultado: " + Cociente.inverso(n));
+                        } catch (Cociente.ZeroMathException e) {
+                            System.err.println(e + " on line " + e.getStackTrace()[0].getLineNumber());
+                        }
+                        break;
+                    case 4:
+                        try{
+                            System.out.println("Introduzca un numero para calcular su Raiz cuadrad");
+                            double n = scanner.nextDouble();
+                            System.out.println("Resultado: " + Cociente.raiz(n));
+                        } catch (Cociente.NegativeSquareException e) {
+                            System.err.println(e + " on line " + e.getStackTrace()[0].getLineNumber());
+                        }
+                        break;
+                    default:
+                        System.out.println("Opcion erronea");
+                        break;
+                }
                 break;
             default:
                 System.out.println("Opción erronea");
