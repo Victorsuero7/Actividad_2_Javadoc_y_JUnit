@@ -25,7 +25,7 @@ class CocienteTest {
     @Test
     void inverso() {
         try {
-            Assertions.assertEquals(1, Cociente.inverso(3.3));
+            Assertions.assertEquals(0.30303030303030304, Cociente.inverso(3.3));
         } catch (Cociente.ZeroMathException e) {
             throw new RuntimeException(e);
         }
