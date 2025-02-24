@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"calculadora","l":"Cociente"},{"p":"calculadora","l":"Main"},{"p":"calculadora","l":"Multiply"},{"p":"calculadora","l":"Cociente.NegativeSquareException"},{"p":"calculadora","l":"Resta"},{"p":"calculadora","l":"Suma"},{"p":"calculadora","l":"Cociente.ZeroMathException"}];updateSearchResults();
