@@ -29,39 +29,44 @@ private static double numAcumulado = 0;
 
     /**
  * Suman dos números reales
- * @param numReal1
- * @param numReal2
+ * @param numReal1 Primer número real para sumar
+ * @param numReal2 Segundo número real para sumar
  * @return devuelve la suma de los parámetros anteriormente declarados.
  */
 public double sumaDosNumReals(double numReal1, double numReal2){
         return numReal1 + numReal2;
     }
 
-    /*
-    Ahora creamos un el segundo metodo para sumar dos números enteros y devolver el resultado.
-     */
 
 /**
  * Suman dos números enteros
- * @param numEntero1
- * @param numEntero2
+ * @param numEntero1 Primer número entero para sumar
+ * @param numEntero2 Segundo número entero para sumar
  * @return devuelve la suma de los parámetros anteriormente declarados.
  */
     public int sumaDosEnteros(int numEntero1, int numEntero2){
         return numEntero1 + numEntero2;
     }
 
-    /*
-    Ahora creamos el tercer metodo para sumar tres numeros reales y devolver el resultado.
+
+    /**
+     * Suman dos números enteros
+     * @param numReal1 Primer número real para sumar
+     * @param numReal2 Segundo número real para sumar
+     * @param numReal3 Tercer número real para sumar
+     * @return devuelve la suma de los parámetros anteriormente declarados.
      */
 
     public double sumaTresNumReals(double numReal1, double numReal2, double numReal3){
             return numReal1 + numReal2 + numReal3;
         }
 
-        /*
-        Ahora creamos el ultimo metodo de una suma acumulado, donde se acumularán los números para la suma.
-         */
+
+    /**
+     * Suman dos números enteros
+     * @param numSumar Número real para sumar
+     * @return devuelve la suma de los parámetros anteriormente declarados.
+     */
     public double sumaAcumulado(double numSumar){
 
          numAcumulado += numSumar;

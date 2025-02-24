@@ -62,14 +62,15 @@ class RestaTest {
 
 
         // Dado (GIVEN)
-        resta.restaAcumulando(-6.0);
-        resta.restaAcumulando(1.0);
+        resta.setNumeroAcumulado(50);
+        resta.restaAcumulando(20.0);
+        resta.restaAcumulando(10.0);
 
         // Cuando (WHEN)
         double resultado = resta.getNumeroAcumulado();
 
         // Entonces (THEN)
-        assertEquals(5.0, resultado, "El resultado de la resta es " + resultado);
+        assertEquals(20.0, resultado, "El resultado de la resta es " + resultado);
 
     }
 }
