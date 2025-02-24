@@ -143,7 +143,71 @@ public class Main {
                 }
                 break;
             case 3:
-                System.out.println("Multiplicación");
+                do {
+                    System.out.println("Elija la operación de mulitplicación deseada");
+                    System.out.println("1 Multiplica dos números reales");
+                    System.out.println("2 Multiplica dos números enteros");
+                    System.out.println("3 Multiplica tres números reales");
+                    System.out.println("4 Obtén el exponente de un número real");
+                    System.out.println("5 Volver al menú principal...");
+                    opcion = scanner.nextInt();
+                    switch (opcion) {
+                        case 1:
+                            System.out.println("Introduzca primer número");
+                            double numReal1 = scanner.nextDouble();
+
+                            System.out.println("Introduzca segundo número");
+                            double numReal2 = scanner.nextDouble();
+
+                            double result1 = Multiply.doubleTwoParamsProduct(numReal1, numReal2);
+                            System.out.println("El resultado es: " + result1);
+
+                            break;
+                        case 2:
+                            System.out.println("Introduzca primer número");
+                            int numInt1 = scanner.nextInt();
+
+                            System.out.println("Introduzca segundo número");
+                            int numInt2 = scanner.nextInt();
+
+                            int result2 = Multiply.intTwoParamsProduct(numInt1, numInt2);
+                            System.out.println("El resultado es: " + result2);
+
+                            break;
+                        case 3:
+                            System.out.println("Introduzca primer número");
+                            double numReale1 = scanner.nextDouble();
+
+                            System.out.println("Introduzca segundo número");
+                            double numReale2 = scanner.nextDouble();
+
+                            System.out.println("Introduzca tercer número");
+                            double numReale3 = scanner.nextDouble();
+
+                            double result3 = Multiply.doubleThreeParamsProduct(numReale1, numReale2, numReale3);
+                            System.out.println("El resultado es: " + result3);
+
+                            break;
+                        case 4:
+                            System.out.println("Introduzca el número");
+                            double numRl1 = scanner.nextDouble();
+
+                            System.out.println("Introduzca el exponente");
+                            int numRl2 = scanner.nextInt();
+
+                            double result4 = Multiply.doubleExponent(numRl1, numRl2);
+                            System.out.println("El resultado es: " + result4);
+
+                            break;
+
+                        case 5:
+                            System.out.println("Regresando al menú principal");
+
+                            break;
+                        default:
+                            System.out.println("Opción errónea");
+                    }
+                } while (opcion != 5);
                 break;
             case 4:
                 System.out.println("División");
@@ -153,31 +217,31 @@ public class Main {
                 System.out.println("3 Calculo del numero inverso un numero real");
                 System.out.println("4 Raiz cuadrada de un numeor real");
                 opcion = scanner.nextInt();
-                switch (opcion){
+                switch (opcion) {
                     case 1:
-                        try{
-                        System.out.println("Introduzca el dividendo");
-                        double dividendo = scanner.nextDouble();
-                        System.out.println("Introduzca el divisor");
-                        double divisor = scanner.nextDouble();
-                        System.out.println("Resultado: " + Cociente.dividir(dividendo,divisor));
+                        try {
+                            System.out.println("Introduzca el dividendo");
+                            double dividendo = scanner.nextDouble();
+                            System.out.println("Introduzca el divisor");
+                            double divisor = scanner.nextDouble();
+                            System.out.println("Resultado: " + Cociente.dividir(dividendo, divisor));
                         } catch (Cociente.ZeroMathException e) {
                             System.err.println(e + " on line " + e.getStackTrace()[0].getLineNumber());
                         }
                         break;
                     case 2:
-                        try{
+                        try {
                             System.out.println("Introduzca el dividendo");
                             int dividendo = scanner.nextInt();
                             System.out.println("Introduzca el divisor");
                             int divisor = scanner.nextInt();
-                            System.out.println("Resultado: " + Cociente.dividir(dividendo,divisor));
+                            System.out.println("Resultado: " + Cociente.dividir(dividendo, divisor));
                         } catch (Cociente.ZeroMathException e) {
                             System.err.println(e + " on line " + e.getStackTrace()[0].getLineNumber());
                         }
                         break;
                     case 3:
-                        try{
+                        try {
                             System.out.println("Introduzca un numero para calcular su inverso");
                             double n = scanner.nextDouble();
                             System.out.println("Resultado: " + Cociente.inverso(n));
@@ -186,7 +250,7 @@ public class Main {
                         }
                         break;
                     case 4:
-                        try{
+                        try {
                             System.out.println("Introduzca un numero para calcular su Raiz cuadrad");
                             double n = scanner.nextDouble();
                             System.out.println("Resultado: " + Cociente.raiz(n));
